@@ -1,25 +1,50 @@
 ---
-title: "Drew Dimmery"
-description: "Methods in Causal Inference, Data Science and Social Science"
+title: "Nest"
+description: "Nest family of R packages for clinical insight generation"
 page-layout: full
-image: /social-card.jpg
+image: /nest-logo-large.png
 resources:
-    - "social-card.jpg"
+    - "nest-logo-large.png"
 ---
 
 ::: {.column-page-inset}
 ::: {.column-page-inset-left}
-I am the scientific coordinator at the Data Science Research Network at the University of Vienna.
 
-I previously worked on the Adaptive Experimentation team at Facebook Core Data Science in New York.
+### What is this site?
 
-My research focuses on the intersection of machine learning and causal inference. I work a lot on experimental design and I think hard about how experimentation can be better and more efficient. I’m also interested in better applying the machinery of machine learning to observational causal inference.
+> THIS SECTION WOULD BE DELETED - JUST TO EXPLAIN PoC
 
-I’m most interested in methodological research useful for the study of social phenomena.
+This is a PoC - hacked together on a Sunday morning. The only thing the website maintainer needs to 
+maintain is the summary (as a markdown file) below this text, then a YAML
+file that lists the packages that make up this family of packages. An example 
+entry is below for teal. Everything else (the people, packages and functions pages)
+are generated on the fly by scraping the package docs and github repos.
+
+There is also a blog section (could be disabled).
+
+```yaml
+- title: "teal"
+  description: |
+    Here is some text on teal.
+    And this is a new line.
+  website: https://insightsengineering.github.io/teal
+  github: https://github.com/insightsengineering/teal
+```
+
+This site is a fork of https://github.com/ddimmery/quarto-website, the packages 
+page is almost the same, but functions and people are new.
+
+### What is Nest?
+
+> THIS SECTION IS A SIMPLE MARKDOWN FILE TO GIVE SOME CONTEXT ON HOW THE PACKAGE FIT TOGETHER
+
+*"In keeping with the Pharma Vision, our mission is to enable Data Sciences to analyze faster"*
+
+New data types require new tools and methodologies and there is a need in biometrics to respond quickly to understand the ever increasing growth of data generated from clinical trials. In recent years, analysis software tools have taken huge leaps forward. Therefore, we have seized the business opportunity to build an R-based toolkit that will allow us to meet these challenges. 
 :::
 
 <div class="column-margin column-container">
-![](headshot.jpg){.rounded}
+![](nest-logo-large.png){.rounded}
 </div>
 :::
 
@@ -27,28 +52,16 @@ I’m most interested in methodological research useful for the study of social 
 
 ::: {.column-page-inset .text-center}
 ```{=html}
-<a class="btn btn-outline-dark", href="https://twitter.com/DrewDim" target="_blank" rel="noopener noreferrer">
-    <i class="bi bi-twitter" role='img' aria-label='Twitter'></i>
-</a>
-
-<a class="btn btn-outline-dark", href="https://github.com/ddimmery" target="_blank" rel="noopener noreferrer">
+<a class="btn btn-outline-dark", href="https://github.com/insightsengineering" target="_blank" rel="noopener noreferrer">
     <i class="bi bi-github" role='img' aria-label='Github'></i>
 </a>
 
-<a class="btn btn-outline-dark", href="https://www.linkedin.com/in/drew-dimmery/" target="_blank" rel="noopener noreferrer">
+<a class="btn btn-outline-dark", href="https://www.linkedin.com/in/pharmaverse/" target="_blank" rel="noopener noreferrer">
     <i class="bi bi-linkedin" role='img' aria-label='LinkedIn'></i>
 </a>
 
-<a class="btn btn-outline-dark", href="https://scholar.google.com/citations?user=qMfnm48AAAAJ" target="_blank" rel="noopener noreferrer">
-    <i class="ai ai-google-scholar" role='img' aria-label='Google Scholar'></i>
-</a>
-
-<a class="btn btn-outline-dark", href="https://arxiv.org/a/dimmery_d_1.html" target="_blank" rel="noopener noreferrer">
-    <i class="ai ai-arxiv" role='img' aria-label='arXiv'></i>
-</a>
-
-<a class="btn btn-outline-dark", href="mailto:pddimmery@gmail.com" target="_blank" rel="noopener noreferrer">
-    <i class="ai bi-envelope" role='img' aria-label='email'></i>
+<a class="btn btn-outline-dark", href="https://pharmaverse.com" target="_blank" rel="noopener noreferrer">
+    <i class="ai bi-envelope" role='img' aria-label='website'></i>
 </a>
 ```
 :::

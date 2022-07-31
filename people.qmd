@@ -1,0 +1,114 @@
+---
+title: "People"
+echo: false
+#jupyter: python3
+section-divs: false
+keep-md: true
+---
+
+```{r}
+#| output: false
+#| cache: true
+library(dplyr)
+library(GithubMetrics)
+
+  d_scanme <- yaml::read_yaml("packages.yaml")
+  
+  # scrape all 
+  helper_extract_yaml <- function(data){
+    tibble::as_tibble(data)
+  }
+  
+  data_pkgs <- tibble(
+    title = character(),
+    description = character(),
+    website = character(),
+    github = character()
+  )
+  
+  for (i in seq_along(d_scanme)){
+    data_pkgs <- helper_extract_yaml(d_scanme[[i]]) %>%
+      bind_rows(data_pkgs)
+  }
+  
+  data_pkgs <- data_pkgs %>%
+    mutate(
+      repo_name = gsub("https://github.com/","",github)
+    )
+
+# get commits
+  repo_all_commits <- gh_commits_get(
+    data_pkgs$repo_name,
+    days_back = 365*10
+  )
+
+# Define contributions
+  contributors <- repo_all_commits %>%
+    group_by(author) %>%
+    summarise(
+      commits = n(),
+      last_commit = max(datetime),
+      first_commit = min(datetime)
+    ) %>%
+    mutate(
+      last_commit = as.Date(last_commit),
+      first_commit = as.Date(first_commit),
+      days = as.numeric(last_commit - first_commit),
+      text_time = case_when(
+        days == 0 ~ "commit in a single day",
+        days > 365*2 ~ paste("commits over",round(days/365,1),"years"),
+        days > 365 ~ paste("commits over",round(days/365,1),"year"),
+        days > 30*2 ~ paste("commits over",round(days/30.25,0),"months"),
+        days > 30 ~ paste("commits over",round(days/30.25,0),"month"),
+        days <= 30 ~ paste(" commits over",days,"days"),
+        TRUE ~ ""
+      )
+    ) %>%
+    filter(!author %in% c(".gitconfig missing email","actions-user"))
+
+  contributors <- contributors %>%
+    left_join(
+      gh_user_get(na.omit(contributors$author)),
+      by = c("author"="username")
+    )
+
+# Generate html for website
+  html_website <- contributors %>%
+    mutate(year = as.numeric(format(last_commit,"%Y"))) %>%
+    #arrange(-year,-commits) %>%
+    arrange(-commits) %>%
+    filter(!is.na(name)) %>%
+    filter(!is.na(author)) %>%
+    mutate(
+      title =
+        glue::glue(
+#          '<img src="{avatar}" alt="" width = "30" height="30"> {name} ({author}): {commits} commits between {first_commit} and {last_commit}'
+          '<img src="{avatar}" alt="" width = "30" height="30"> {name} ({author}): {commits} commits {text_time}'
+          )
+    ) %>%
+    select(tail(names(.), 1)) %>%
+    knitr::kable("html", escape = FALSE)
+  
+  html_website <- gsub(" <thead>.*</thead>","",html_website)
+```
+
+```{r}
+#| label: "people"
+#| id: "people"
+#| output: asis
+  
+# render --------  
+cat(
+  glue::glue(
+    "
+
+    </br>
+
+    <p>We'd like to acknowledge the ~{n_distinct(repo_all_commits$commit_email)} people that have contributed code to these packages. {n_distinct(contributors$author)} of these contributors have their commits linked to a Github account, and are acknowledged below.</p>
+    </br>
+    {html_website}
+    "
+  ))
+```
+
+

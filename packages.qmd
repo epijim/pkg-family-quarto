@@ -1,5 +1,5 @@
 ---
-title: "Software"
+title: "Packages"
 echo: false
 jupyter: python3
 section-divs: false
@@ -19,7 +19,7 @@ def button(url, str, icon):
         {str}
     </a>"""
 
-yaml_data = yaml.safe_load(open("software.yaml"))
+yaml_data = yaml.safe_load(open("packages.yaml"))
 
 for data in yaml_data[::-1]:
     display(Markdown("## `" + data["title"] + "` {#" + data["title"] + "}"))

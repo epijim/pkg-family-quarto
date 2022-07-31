@@ -1,4 +1,11 @@
 /.quarto/
+_site/
+_admiral/
 *.RData
 *.rdb
 *.rdx
+.Rproj.user
+
+.DS_Store
+
+.Rhistory

@@ -14,10 +14,10 @@ smooth-scroll: true
 
 # Default author
 author:
-  - name: Drew Dimmery
-    url: https://ddimmery.com
-    affiliation: Data Science @ University of Vienna
-    affiliation-url: https://datascience.univie.ac.at/
+  - name: Nest team
+    url: https://github.com/insightsengineering
+    affiliation: Pharma companies
+    affiliation-url: https://roche.com/
 
 # citation
 citation: true

@@ -1,0 +1,56 @@
+# Teal
+
+- title: "teal"
+  description: |
+    **Outdated!** Users should switch to [actively maintained and updated RD tools](https://rdpackages.github.io/).
+    Provides the tools to undertake estimation in Regression Discontinuity Designs. Both sharp and fuzzy designs are supported. Estimation is accomplished using local linear regression. A provided function will utilize Imbens-Kalyanaraman optimal bandwidth calculation. A function is also included to test the assumption of no-sorting effects.
+  website: https://insightsengineering.github.io/teal
+  github: https://github.com/insightsengineering/teal
+  #package: https://cran.r-project.org/package=teal
+- title: "teal.modules.general"
+  description: |
+    The goal of `regweight` is to make it easy to diagnose a model using Aronow and Samii (2015) regression weights.
+    In short, these weights show which observations are most influential for determining the observed value of a coefficient in a linear regression. If the linear regression is aiming to estimate causal effects, this implies that the OLS estimand may differ from the average treatment effect. These linear regression weights provide, in some sense, the most precise estimate available given a conditioning set (and a linear model). These weights are in expectation the conditional variance of the variable of interest (given the other covariates in the model).
+  website: https://insightsengineering.github.io/tern.modules.general
+  github: https://github.com/insightsengineering/tern.modules.general
+- title: "teal.modules.clinical"
+  description: |
+    `tidyhte` provides tidy semantics for estimation of heterogeneous treatment effects through the use of Kennedy's (n.d.) doubly-robust learner.
+    The goal of `tidyhte` is to use a sort of “recipe” design. This should (hopefully) make it extremely easy to scale an analysis of HTE from the common single-outcome / single-moderator case to many outcomes and many moderators. The configuration of `tidyhte` should make it extremely easy to perform the same analysis across many outcomes and for a wide-array of moderators. It’s written to be fairly easy to extend to different models and to add additional diagnostics and ways to output information from a set of HTE estimates.
+  website: https://insightsengineering.github.io/teal.modules.clinical
+  github: https://github.com/insightsengineering/teal.modules.clinical
+
+# Tern
+
+- title: "tern"
+  description: |
+    `tidyhte` provides tidy semantics for estimation of heterogeneous treatment effects through the use of Kennedy's (n.d.) doubly-robust learner.
+    The goal of `tidyhte` is to use a sort of “recipe” design. This should (hopefully) make it extremely easy to scale an analysis of HTE from the common single-outcome / single-moderator case to many outcomes and many moderators. The configuration of `tidyhte` should make it extremely easy to perform the same analysis across many outcomes and for a wide-array of moderators. It’s written to be fairly easy to extend to different models and to add additional diagnostics and ways to output information from a set of HTE estimates.
+  website: https://insightsengineering.github.io/tern
+  github: https://github.com/insightsengineering/tern
+- title: "nestcolor"
+  description: |
+    Package managing visual conventions of NEST graphs
+  website: https://insightsengineering.github.io/nestcolor
+  github: https://github.com/insightsengineering/tern
+
+# Other packages
+
+- title: "rtables"
+  description: |
+    The rtables package is the foundation layer of NEST's tabling  capabilities.
+    It's functions are used to create layouts, produce elementary statistics as well
+    as handle many generic table  control features like content pruning and sorting.
+    You can use rtables functions to create  additional simple to complex layouts
+    to address specific study needs.
+  website: https://roche.github.io/rtables/
+  github: https://github.com/Roche/rtables
+  package: https://cran.r-project.org/package=rtables
+- title: "formatters"
+  description: |
+    We provide a framework for rendering complex tables to ASCII, and a set of
+    formatters for transforming values or sets of values into ASCII-ready display strings.
+  website: https://insightsengineering.github.io/formatters/
+  github: https://github.com/insightsengineering/formatters
+  package: https://cran.r-project.org/package=formatters
+

@@ -3,26 +3,29 @@ project:
   output-dir: _site
 
 website:
-  title: "Drew Dimmery"
-  description: "Personal website of Drew Dimmery"
-  site-url: https://ddimmery.com
-  repo-url: https://github.com/ddimmery/quarto-website
-  google-analytics: "G-Y7YLFF5F90"
+  title: "Nest"
+  description: "Parent website for the Nest packages"
+  site-url: /
+  repo-url: https://github.com/insightsengineering
+  google-analytics: "G-XXXXXX"
   open-graph: true
   favicon: favicon.png
-  twitter-card: 
-    creator: "@drewdim"
-    site: "@drewdim"
+  twitter-card:
+    creator: "@roche"
+    site: "@roche"
     card-style: "summary_large_image"
+  search:
+    location: navbar
+    type: overlay
   navbar:
     background: dark
     foreground: light
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-      - href: research.qmd
-      - href: software.qmd
+      - href: packages.qmd
+      - href: functions.qmd
+      - href: people.qmd
       - href: blog.qmd
 
 format:
