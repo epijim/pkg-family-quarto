@@ -8,7 +8,7 @@ keep-md: true
 
 ```{r}
 #| output: false
-#| cache: true
+#| cache: false
 library(dplyr)
 library(GithubMetrics)
 

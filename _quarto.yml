@@ -3,10 +3,10 @@ project:
   output-dir: _site
 
 website:
-  title: "Nest"
-  description: "Parent website for the Nest packages"
+  title: "admiral"
+  description: "Parent website for the admiral packages"
   site-url: /
-  repo-url: https://github.com/insightsengineering
+  repo-url: https://github.com/pharmaverse
   google-analytics: "G-XXXXXX"
   open-graph: true
   favicon: favicon.png

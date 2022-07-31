@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 277b7251-3f46-4596-b77c-9003677fa920
+      url: 'https://quartopub.org/sites/epijim/admiral'

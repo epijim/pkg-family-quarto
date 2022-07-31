@@ -1,10 +1,10 @@
 ---
-title: "Nest"
-description: "Nest family of R packages for clinical insight generation"
+title: "admiral"
+description: "admiral family of R packages for ADaM dataset generation"
 page-layout: full
-image: /nest-logo-large.png
+image: /admiral-logo-large.png
 resources:
-    - "nest-logo-large.png"
+    - "admiral-logo-large.png"
 ---
 
 ::: {.column-page-inset}
@@ -34,17 +34,18 @@ There is also a blog section (could be disabled).
 This site is a fork of https://github.com/ddimmery/quarto-website, the packages 
 page is almost the same, but functions and people are new.
 
-### What is Nest?
+### What is admiral?
 
 > THIS SECTION IS A SIMPLE MARKDOWN FILE TO GIVE SOME CONTEXT ON HOW THE PACKAGE FIT TOGETHER
 
 *"In keeping with the Pharma Vision, our mission is to enable Data Sciences to analyze faster"*
 
-New data types require new tools and methodologies and there is a need in biometrics to respond quickly to understand the ever increasing growth of data generated from clinical trials. In recent years, analysis software tools have taken huge leaps forward. Therefore, we have seized the business opportunity to build an R-based toolkit that will allow us to meet these challenges. 
+Here we can put a bunch of text in markdown format about what admiral is as a 
+pan-package family. We can add images, meme gifs- etc. Anything that flys in markdown.
 :::
 
 <div class="column-margin column-container">
-![](nest-logo-large.png){.rounded}
+![](admiral-logo-large.png){.rounded}
 </div>
 :::
 
