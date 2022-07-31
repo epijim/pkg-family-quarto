@@ -9,3 +9,7 @@ _admiral/
 .DS_Store
 
 .Rhistory
+
+people.md
+
+people_cache/html/__packages
