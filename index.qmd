@@ -2,25 +2,41 @@
 title: "Nest"
 description: "Nest family of R packages for clinical insight generation"
 page-layout: full
-image: /nest-logo-large.png
+image: /logo-large.png
 resources:
-    - "nest-logo-large.png"
+    - "logo-large.png"
 ---
 
 ::: {.column-page-inset}
 ::: {.column-page-inset-left}
+
+### What is Nest?
+
+> THIS SECTION IS A SIMPLE MARKDOWN FILE TO GIVE SOME CONTEXT ON HOW THE PACKAGE FIT TOGETHER
+
+*"In keeping with the Pharma Vision, our mission is to enable Data Sciences to analyze faster"*
+
+New data types require new tools and methodologies and there is a need in biometrics to respond quickly to understand the ever increasing growth of data generated from clinical trials. In recent years, analysis software tools have taken huge leaps forward. Therefore, we have seized the business opportunity to build an R-based toolkit that will allow us to meet these challenges. 
 
 ### What is this site?
 
 > THIS SECTION WOULD BE DELETED - JUST TO EXPLAIN PoC
 
 This is a PoC - hacked together on a Sunday morning. The only thing the website maintainer needs to 
-maintain is the summary (as a markdown file) below this text, then a YAML
-file that lists the packages that make up this family of packages. An example 
-entry is below for teal. Everything else (the people, packages and functions pages)
+maintain is below. 
+Everything else (the people, packages and functions pages)
 are generated on the fly by scraping the package docs and github repos.
 
+In summary, the places you need to edit are:
+
+* `packages.yaml` - YAML file to list packages in the package family
+* `logo-large.yaml` - The logo / image you want to use (will set this to be auto-shrunk into an icon)
+* `index.qmd` - The file that rendered this page, where you can put some info on the family.
+
 There is also a blog section (could be disabled).
+
+An example 
+entry is below for teal.
 
 ```yaml
 - title: "teal"
@@ -33,18 +49,10 @@ There is also a blog section (could be disabled).
 
 This site is a fork of https://github.com/ddimmery/quarto-website, the packages 
 page is almost the same, but functions and people are new.
-
-### What is Nest?
-
-> THIS SECTION IS A SIMPLE MARKDOWN FILE TO GIVE SOME CONTEXT ON HOW THE PACKAGE FIT TOGETHER
-
-*"In keeping with the Pharma Vision, our mission is to enable Data Sciences to analyze faster"*
-
-New data types require new tools and methodologies and there is a need in biometrics to respond quickly to understand the ever increasing growth of data generated from clinical trials. In recent years, analysis software tools have taken huge leaps forward. Therefore, we have seized the business opportunity to build an R-based toolkit that will allow us to meet these challenges. 
 :::
 
 <div class="column-margin column-container">
-![](nest-logo-large.png){.rounded}
+![](logo-large.png){.rounded}
 </div>
 :::
 
@@ -60,9 +68,14 @@ New data types require new tools and methodologies and there is a need in biomet
     <i class="bi bi-linkedin" role='img' aria-label='LinkedIn'></i>
 </a>
 
-<a class="btn btn-outline-dark", href="https://pharmaverse.com" target="_blank" rel="noopener noreferrer">
-    <i class="ai bi-envelope" role='img' aria-label='website'></i>
+<a class="btn btn-outline-dark", href="https://pharmaverse.org/" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-windo" role='img' aria-label='pharmaverse'></i>pharmaverse.org
 </a>
+
+
+<!-- <a class="btn btn-outline-dark", href="mailto:" target="_blank" rel="noopener noreferrer"> -->
+<!--     <i class="ai bi-envelope" role='img' aria-label='email'></i> -->
+<!-- </a> -->
 ```
 :::
 
