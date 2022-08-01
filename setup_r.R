@@ -1,6 +1,8 @@
 library(dplyr)
 library(remotes)
 
+####################### Install R packages
+
 # read YAML
   d_scanme <- yaml::read_yaml("packages.yaml")
 
